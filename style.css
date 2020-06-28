@@ -1,0 +1,323 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+#container{
+    position: relative;
+    width: 50vw;
+    height: 80vh;
+    top: 5%;
+    left: 25%;
+    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+.tic{
+position: relative;
+text-align: center;
+background-color: aqua;
+width: 100%;
+height: 100%;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr;
+}
+span, input{
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    padding: 0;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    background-color:#b590ca;
+}
+#buttons{
+    position: relative;
+    top: 8%;
+    margin-left: 47%;
+    max-width: 100%;
+}
+button{
+    background-color: black;
+    font-family: sans-serif;
+    font-size: 100px;
+    padding: 25px;
+    border: 0px;
+    color: white;
+    border-radius: 15%;
+}
+
+#overlay{
+position: absolute;
+top: 0;
+margin: 0em;
+padding: 0em;
+min-width: 100%;
+min-height: 100%;
+width: 100vw;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+color: white;
+padding: 5px;
+visibility: visible;
+text-align: center;
+font-size: 100px;
+font-weight: 700;
+background: rgb(13,13,173);
+background: -moz-linear-gradient(167deg, rgba(13,13,173,1) 0%, rgba(173,105,137,1) 49%, rgba(238,133,114,1) 100%);
+background: -webkit-linear-gradient(167deg, rgba(13,13,173,1) 0%, rgba(173,105,137,1) 49%, rgba(238,133,114,1) 100%);
+background: linear-gradient(167deg, rgba(13,13,173,1) 0%, rgba(173,105,137,1) 49%, rgba(238,133,114,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0d0dad",endColorstr="#ee8572",GradientType=1); 
+}  
+#start{
+position: absolute;
+top: 65%;
+left: 40%;
+}
+#submit, #restart{
+position: absolute;
+top: 80%;
+font-size: 20px;
+padding: 10px;
+}
+#timer{
+position: fixed;
+top: 10%;
+right: 10%;
+font-weight: 400;
+}
+#timer::before{
+position: fixed;
+content: "Timer : ";
+top: 10%;
+right: 13%;
+font-weight: 400;
+}
+@media(max-width : 1023px){
+#start{
+position: absolute;
+top: 70%;
+left: 35%;
+}
+}
+@media(max-width: 973px){
+#timer{
+position: fixed;
+top: 90%;
+right: 80px;
+}
+#timer::before{
+position: fixed;
+content: "Timer : ";
+top: 90%;
+right: 120px;
+}
+}
+@media(max-width: 495px){
+#timer{
+position: fixed;
+top: 90%;
+right: 10px;
+}
+#timer::before{
+position: fixed;
+content: "Timer : ";
+top: 90%;
+right: 50px;
+}
+}
+@media(max-width: 350px){
+#timer{
+position: fixed;
+top: 90%;
+font-size: 10px;
+right: 0px;
+}
+#timer::before{
+position: fixed;
+content: "Timer : ";
+top: 90%;
+font-size: 10px;
+right: 20px;
+}
+}
+@media(max-width: 255px){
+#buttons{
+ position: absolute;
+ top:90%;
+margin-left: 5%;
+}
+}
+@media(max-width : 720px){
+#restart{
+position: absolute;
+top: 90%;
+left: 40%;
+}
+#container{
+    width: 70vw;
+    height: 80vh;
+    top: 5%;
+    left: 10%;
+}
+
+}
+@media(max-width : 610px){
+#overlay{
+    font-size: 50px;
+}
+#start{
+position: absolute;
+top: 70%;
+left: 35%;
+font-size: 50px;
+}
+#restart{
+position: absolute;
+top: 70%;
+left: 30%;
+}
+}
+@media(max-width: 900px){
+#container{
+    width: 70vw;
+    left: 15%;
+}
+}
+@media(max-width: 650px){
+#container{
+    width: 80vw;
+    top: 5%;
+    left: 10%;
+}
+}
+@media(max-width: 580px){
+#container{
+    width: 90vw;
+    top: 5%;
+    left: 5%;
+}
+}
+@media(max-width : 410px){
+#overlay{
+    font-size: 40px;
+}
+#start{
+position: absolute;
+top: 70%;
+left: 35%;
+font-size: 40px;
+}
+}
+@media(max-width : 290px){
+#overlay{
+    font-size: 40px;
+}
+#start{
+position: absolute;
+top: 70%;
+left: 30%;
+font-size: 40px;
+}
+}
+@media(max-width : 235px){
+#overlay{
+    font-size: 40px;
+}
+#start{
+position: absolute;
+top: 70%;
+left: 20%;
+font-size: 40px;
+}
+#restart{
+position: absolute;
+top: 70%;
+left: 20%;
+}
+}
+@media(max-width : 200px){
+#overlay{
+    font-size: 30px;
+}
+#start{
+position: absolute;
+top: 70%;
+left: 20%;
+font-size: 30px;
+padding: 15px;
+}
+#restart{
+position: absolute;
+top: 70%;
+left: 10%;
+}
+}
+@media(max-width : 150px){
+#overlay{
+    font-size: 20px;
+    min-width: 190%;
+    min-height: 190%;
+}
+#start{
+position: absolute;
+top: 70%;
+left: 40%;
+font-size: 20px;
+padding: 15px;
+}
+#container{
+    min-width: 170vw;
+    overflow-x: visible;
+    top: 5%;
+    left: 10%;
+}
+
+#timer{
+position: fixed;
+top: 50%;
+font-size: 10px;
+right: 0px;
+}
+#timer::before{
+position: fixed;
+content: "Timer : ";
+top: 50%;
+font-size: 10px;
+right: 20px;
+}
+}
+@media(max-width : 115px){
+#start{
+position: absolute;
+top: 70%;
+left: 30%;
+font-size: 20px;
+padding: 15px;
+}
+}
+@media(max-width : 80px){
+#overlay{
+    font-size: 20px;
+    min-width: 200%;
+    min-height: 200%;
+}
+#start{
+position: absolute;
+top: 70%;
+left: 20%;
+font-size: 20px;
+padding: 15px;
+}
+}
